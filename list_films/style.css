@@ -1,0 +1,369 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body{
+	background-color: #20201F;
+}
+
+a{
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+h2{
+	margin-top: 40px;
+	margin-left: 20%;
+}
+
+li{
+	list-style: none;
+}
+
+.titulo{
+	margin-left: 15px;
+	margin-top: 15px;
+	font-size: 40px;
+}
+
+p{
+	margin-top: 45px
+	margin-left: 25px;
+	font-size: 26px;
+}
+
+hr{
+	margin-left: 10%;
+	background: #20201F;
+	margin-top: 20px; 
+}
+
+.title2{
+	margin-left: 40%;
+	font-size: 40px;
+}
+
+.container{
+	max-width: 800px;
+	margin: 0px auto 18px auto;
+	margin-top: 12px;
+	background: #f0f0f0;
+	border-radius: 6px;
+	height: 1000px;
+}
+
+.filme {
+width: 100%;
+height: 100%;
+background: #FFE500;
+color: #20201F;
+font-family: 'Open Sans', sans-serif;
+border-radius: 8px;
+box-shadow: 0 0 1em #20201F;
+
+}
+
+.title{
+	margin-top: 40px;
+	margin-left: 30%;
+	font-size: 35px;
+}
+
+input{
+	width: 325px;
+	margin-left: 30%;
+	height: 40px;
+	margin-top: 12px;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+	box-shadow: 0 0 1em #20201F;
+}
+
+.btn{
+	background: #20201F;
+	color: #FFE500;
+	cursor: pointer;
+}
+
+
+
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ background-color: #FFE500;
+ color: #20201F;
+}
+.nav-links a {
+ color: #20201F;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+ font-family: 'Open Sans', sans-serif;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ 	color: #FFE500;
+ 	border-radius: 3px;
+ 	transition: 0.5s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color: #FFE500;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+
+.title{
+	margin-left: 20%;
+}
+
+input{
+	margin-left: 20%;
+}
+
+}
+
+/*FOOTER*/
+div.main-content{
+	background: #FFE500;
+	color: #20201F;
+	display: flex;
+	font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+	bottom: 0px;
+	width: 100%;
+}
+
+.main-content .box{
+	flex-basis: 50%;
+}
+
+.box h2{
+	font-size: 18px;
+	font-weight: 600px;
+	text-transform: uppercase;
+}
+
+.box .content{
+	margin: 20px 0 0 0;
+	position: relative;
+}
+.box .content:after{
+	position: absolute;
+	content: "";
+	width: 15%;
+	height: 2px;
+}
+
+.box .content:before{
+	position: absolute;
+	content: "";
+	height: 2px;
+	width: 100%;
+	top: -10px;
+}
+
+.left .content .social{
+	margin: 20px 0 0 0;
+}
+
+.left .content p{
+	font-size: 14px;
+}
+
+.left .content .social a{
+	padding: 0 2px;
+}
+
+.left .content .social a span{
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	color: #20201F;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 18px;
+	transition: .5s;
+}
+
+.left .content .social a span:hover{
+	color: #FFE500;
+	background: #20201F;
+}
+.left .content p{
+	text-align: justify;
+}
+
+.center .email{
+	margin: 20px 0 0 0;
+}
+
+.center .email a{
+	padding: 0 2px;
+}
+
+
+.center .email a span{
+	background: #FFE500;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	color: #20201F;
+}
+
+.center .email a span:hover{
+	background: #20201F;
+	color: #FFE500;
+	transition: .5s;
+}
+
+.center .Numero{
+	margin: 10px 0;
+}
+
+.center .Numero a{
+	padding: 0 2px;
+}
+
+.center .Numero a span{
+	background: #FFE500;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	color: #20201F;
+	cursor: pointer;
+}
+
+.center .Numero a span:hover{
+	background: #20201f;
+	color: #FFE500;
+	transition: .5s;
+}
+
+.center .text{
+	font-size: 17px;
+	font-weight: 500;
+	padding-left: 10px;
+}
+
+.right .msg{
+	margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+	width: 100%;
+	font-size: 17px;
+	padding-left: 10px;
+	border: 1px solid;
+	outline: none;
+}
+
+.right form input{
+	height: 35px;
+}
+
+.right form .text{
+	font-size: 17px;
+	margin-bottom: 2px;
+	color: black;
+}
+
+.right form .btn{
+	margin-top: 10px;
+}
+
+.right form .btn button{
+	height: 40px;
+	width: 100%;
+	background: white;
+	font-size: 17px;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #004eff;
+	transition: .5s;
+}
+
+.right form .btn button:hover{
+	background: #004eff;
+	color: white;
+}
+
+.bottom .center{
+	padding: 5px;
+	font-size: 15px;
+	background: #FFE500;
+	color: white;
+	text-align: center;
+}
+
+.bottom .center span{
+	color: #20201f;
+	font-family: 'Open Sans', sans-serif;
+}
+.bottom .center a{
+	color: #20201f;
+	text-decoration: none;
+}
+.bottom .center a:hover{
+	text-decoration: underline;
+}
+
+@media (max-width:  850px){
+	footer{
+       background: black;
+	}
+}
+
