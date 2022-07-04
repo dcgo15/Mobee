@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobee</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+	<nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">Mobee<i class="fa-solid fa-bee"></i></div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="help.html">About</a></li>
+       </div>
+     </ul>
+    </nav>
+
+<section class="container">
+	
+<div class="filme">
+	<form id="forms">
+        <h1 class="title">Search your movie</h1>
+        <input id="nome" type="name" placeholder="Movie" required/><br>
+        <input id="ano" type="number" placeholder="Year"><br>
+        <input class="btn" type="submit" value="Search"><br>
+        <input class= "btn" type="reset" >   
+    </form>
+    <hr size="2" width="80%">
+    <h1 class="title2">Results:</h1>
+    <h2 id="title">Nome:</h2>
+    <h2 id="year">Ano:</h2>
+    <h2 id="lan">Lançamento:</h2>
+    <h2 id="dur">Duração:</h2>
+    <h2 id="gen">Genero:</h2>
+    <h2 id="plot">Resumo:</h2>
+</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    var form = document.getElementById("forms");
+    var nome = document.getElementById("nome");
+    var ano = document.getElementById("ano");
+
+    form.addEventListener("submit", function(e){
+
+        document.getElementById("title").innerHTML = nome.value;
+        document.getElementById("year").innerHTML = ano.value;
+
+        let filme = nome.value;
+        let year = ano.value;
+        let code = "b1fcacb";
+
+        var linkUrl = `http://www.omdbapi.com/?t=${filme}&y=${ano}&apikey=${code}`
+
+        $.getJSON(linkUrl, function(data){
+            //console.log("Esta é a função");
+            //console.log(data.Title);
+            document.getElementById("title").innerHTML = data.Title;
+            document.getElementById("year").innerHTML = data.Year;
+            document.getElementById("lan").innerHTML = data.Released;
+            document.getElementById("dur").innerHTML = data.Runtime;
+            document.getElementById("gen").innerHTML = data.Genre;
+            document.getElementById("plot").innerHTML = data.Plot;
+        });
+
+
+        e.preventDefault();
+    }); 
+</script>
+
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2>Sobre nós</h2>
+            <div class="content">
+                <p>Site para pesquisa e descoberta de filmes</p>
+                <div class="social">
+                   <a href="https://www.instagram.com/imdcgo/"><span class="fab fa-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="center box">
+            <h2>Endereço</h2>
+            <div class="email">
+                <a href="mailto:suportesmallze@gmail.com"><span class="fas fa-envelope"></span></a>
+                <span class="text">softmaze6@gmail.com</span>
+            </div>
+            <div class="Numero">
+                <a href="#"><span class="fas fa-phone"></span></a>
+                <span class="text">(75) 98224-3100</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="center">
+            <span class="credit">Desenvolvido por<a href="https://www.instagram.com/imdcgo">Maze Inc</a></span>
+            <span>© 2022 Todos os direitos reservados</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
